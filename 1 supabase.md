@@ -97,3 +97,55 @@ Certainly! Here's a detailed yet easy-to-read, point-by-point summary of the Sup
 ---
 
 ### 8. Authentication System
+- **Built-in full auth system** with:
+  - Email/password signup & login
+  - Passwordless magic links via email
+  - Social logins (Google, GitHub, Twitter, Facebook, Discord, etc.)
+  - Phone (SMS) login
+- Invite users, manage accounts in the dashboard.
+- Auto-generated verification, invitation, password reset **emails** with customizable templates.
+- Configure redirect URLs for local and production environments.
+- Manage all users from the Auth dashboard, status, providers used.
+- The SDK provides functions for:
+  - signup()
+  - login()
+  - reset password
+  - logout()
+  - session handling
+
+---
+
+### 9. User Management, Recovery, and Email Templates
+- Password recovery flow built-in (reset sends link via email).
+- Customizable HTML email templates (signup, invite, password reset, etc.)
+- Variables to personalize content: user email, links.
+- Configure **site URLs and redirects** to handle local vs. production seamlessly.
+- Example: user requests reset → email → link opens reset form on your app → updates password.
+
+---
+
+### 10. Data Operations (CRUD) with the SDK
+- Query data securely via SDK:
+  - Select (*fetch with filters, sorting, pagination*)
+  - Insert (*add new records*)
+  - Update (*modify existing*)
+  - Delete (*remove*)
+- Generated code snippets per table to get started.
+- Supports filters like equals, greater than, less than, in-list, case-insensitive, etc.
+- Supports pagination with range()
+- Automatically respects RLS policies.
+- Sample covered: fetching orders, adding new order, updating prices, deleting orders.
+
+---
+
+### 11. Real-time Subscriptions
+- Listen to data changes **live** in the frontend.
+- Subscribe to CREATE, UPDATE, DELETE events per table.
+- Useful for chats, CRMs, dashboards, notifications.
+- Enable real-time replication on table settings.
+- SDK uses simple API: .channel().on().subscribe()
+- Supports filtering subscription events.
+- Example updates UI orders list in real time as data changes in DB.
+
+---
+
