@@ -158,3 +158,71 @@ Certainly! Here's a detailed yet easy-to-read, point-by-point summary of the Sup
 
 ---
 
+### 13. Functions (Stored Procedures) in PostgreSQL
+- Write **PL/pgSQL** functions to run complex server-side logic.
+- Call from API using SDK with .rpc()
+- Example: Increment a views count on a record.
+- Define via UI or SQL editor.
+- Pass arguments, get results in JSON.
+
+---
+
+### 14. Triggers
+- Automated server-side hooks.
+- Fire **before or after insert/update/delete** to run a function.
+- Example: After user signup, insert user profile into another table.
+- Manageable via GUI or SQL editor.
+- Linked to your custom functions (created earlier).
+
+---
+
+### 15. Schemas for Namespaces
+- Organize your DB by **schemas** (logical namespaces).
+- Examples:
+  - auth schema: system auth tables
+  - public schema: your app data
+  - sales schema: sales-related data
+- Allows same table names in different schemas.
+- Helps multi-tenancy, data separation, admin vs. public data.
+- Create schemas via SQL.
+
+---
+
+### 16. File Storage (Buckets)
+- Built-in scalable file storage.
+- Create “Buckets” (like folders or S3 buckets).
+- Buckets can be **public or secured**.
+- Upload/download files via the dashboard or SDK.
+- Store images, avatars, docs, etc.
+- Bucket access also protected via RLS policies.
+- Generate public URLs or secured download links.
+- Organize files via folders inside buckets.
+
+---
+
+### 17. Logs & Analytics
+- Superbase provides detailed **logs** for:
+  - API requests
+  - Auth events
+  - Storage access
+  - Real-time subscriptions
+- Filter logs by timeframe, severity, type.
+- Useful for debugging, monitoring, and security auditing.
+- Export logs as CSV.
+- Performance insights on slow queries.
+
+---
+
+### 18. PostgreSQL Extensions
+- Superbase supports popular **Postgres extensions**.
+- Adds extra features without code:
+  - http: HTTP calls inside Postgres functions
+  - pg_graphql: server GraphQL layer
+  - pgcrypto: cryptographic functions
+  - pgjwt: JWT handling inside SQL
+  - geometric types, PostGIS (geo), UUID helpers, etc.
+- Enable via GUI toggle.
+- Use inside functions/triggers for added power.
+
+---
+
