@@ -149,3 +149,12 @@ Certainly! Here's a detailed yet easy-to-read, point-by-point summary of the Sup
 
 ---
 
+### 12. Table Relationships and Views
+- Visual interface or SQL to configure foreign keys.
+- Fetch related records with simple syntax: e.g.,
+  - .select('*, related_table(*)')
+- Supports nested selects, multiple depths.
+- Ensures relational integrity (no orphans).
+
+---
+
